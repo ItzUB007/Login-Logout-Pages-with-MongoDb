@@ -16,6 +16,3 @@ nodemon app.js
       or
   npm start
 ```
-
-## Made by:
-### Deepankur Lohiya
