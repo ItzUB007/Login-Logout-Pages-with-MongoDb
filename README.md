@@ -1,5 +1,5 @@
 # Node JS login portal application
-This application is a full fledged login portal connected with mongodb and the email verification and then login. If not a member then you need to register to the portal
+This application is a full fledged login portal connected with mongodb. If not a member then you need to register to the portal
 
 ## Requirements
 You need to have mongodb installed in your system
