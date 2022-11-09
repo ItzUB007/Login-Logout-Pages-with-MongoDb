@@ -1,0 +1,52 @@
+<%- include('layout') -%>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">XenonStack Task - Web App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Members</a>
+        </li>
+        <!--<li class="nav-item">
+          <a class="nav-link" href="/users/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/login">Login</a>
+        </li>-->
+
+        <li class="nav-item navbar-right">
+          <a class="nav-link" href="/users/logout">Hello, <%= person.name %> - Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="title"> Trying to sell your car?</div>
+  <div class="title"> Contact Us</div>
+  <div class="content">
+    <form action="/users/query" method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Name</span>
+          <input type="text" placeholder="Enter your Name" name="name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" name="email" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Query</span>
+          <input type="text" placeholder="Enter your queries" name="query" required>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>

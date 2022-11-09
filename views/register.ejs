@@ -1,0 +1,93 @@
+<%- include('layout') -%>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">XenonStack Task - Web App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Members</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/login">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="title">Registration</div>
+  <div class="content">
+    <form action="/users/register" enctype='multipart/form-data' method="post">
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter your name" name="name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Username</span>
+          <input type="text" placeholder="Enter your username" name="username" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" name="email" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" name="contact" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="text" placeholder="Enter your password" name="password" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="text" placeholder="Confirm your password" name="cpassword" required>
+        </div>
+      </div>
+      <div class="button">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('footer') -%>
+
+
+
+
+<!--block content
+    h2.page-header Register
+    if errors
+      each error, i in errors
+        div.alert.alert-danger #{error.msg}
+    form(method='post', action='/users/register',enctype='multipart/form-data')
+        .form-group
+          label Name
+          input.form-control(name='name',type='text',placeholder='Enter your name',id='name',value='')
+        .form-group
+          label Contact-Number
+          input.form-control(name='contact',type='number',placeholder='Enter your contact number',maxlength='10',id='contact',value='')
+        .form-group
+          label Email
+          input.form-control(name='email',type='email',placeholder='Enter your email',id='email',value='')
+        .form-group
+          label Username
+          input.form-control(name='username',type='text',placeholder='Enter your username',id='username',value='')
+        .form-group
+          label Password
+          input.form-control(name='password',type='password',placeholder='Enter your password',id='password',value='')
+        .form-group
+          label Confirm Password
+          input.form-control(name='cpassword',type='password',placeholder='Confirm password',id='cpassword')
+        .form-group
+          label Profile Image
+          input.form-control(name='profile',type='file')
+        input.btn.btn-primary(type='submit',value='Register')-->
